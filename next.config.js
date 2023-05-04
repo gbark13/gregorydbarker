@@ -16,7 +16,7 @@ const nextConfig = {
               value: 'bella.daughter.of.gregorydbarker.com',
             },
           ],
-          destination: '/bella/src/app/:path*',
+          destination: '/bella/:path*',
         },
       ]
     }
