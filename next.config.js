@@ -16,13 +16,7 @@ const nextConfig = {
           ],
           destination: '/bella/:path*',
         },
-      ],
-      fallback: [
-        {
-          source: '/:path*',
-          destination: '/:path*',
-        },
-      ],
+      ]
     }
   }
 }
