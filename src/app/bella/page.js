@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import styles from './page.module.css'
 
 export default function Bella() {
   return (
-    <main style={{ color: "black", backgroundImage: "url('/seamless_pattern_with_bees_and_flowers_small.jpeg')" }}>
+    <main style={{ color: "black", backgroundImage: "url('/images/seamless_pattern_with_bees_and_flowers_small.jpeg')" }}>
       <div style={{ display: "flex", flexDirection: "column", backgroundColor: "rgba(225, 225, 225, 0.7)", padding: "2rem" }}>
         <h1>Here is the <i>buzz</i> on Bella&apos;s 5th Birthday Party</h1>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -14,7 +13,7 @@ export default function Bella() {
             <p>5206 E Sierra Sunset Trl, Cave Creek, AZ 85331</p>
           </div>
           <div>
-            <Image src={"/bee.gif"} width={130} height={130} />
+            <Image src={"/images/bee.gif"} width={130} height={130} />
           </div>
         </div>
         <h2 style={{ marginTop: "10px" }}>No <i>honey</i> business, just fun for the kids</h2>
