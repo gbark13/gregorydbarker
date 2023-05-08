@@ -7,24 +7,24 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: '/_next/(.*)',
+          source: '/_next/:path',
           has: [
             {
               type: 'host',
               value: 'bella.daughter.of.gregorydbarker.com',
             },
           ],
-          destination: '/:path*',
+          destination: '/_next/:path',
         },
         {
-          source: '/images/(.*)',
+          source: '/images/:path',
           has: [
             {
               type: 'host',
               value: 'bella.daughter.of.gregorydbarker.com',
             },
           ],
-          destination: '/:path*',
+          destination: '/images/:path',
         },
         {
           source: '/:path((?!_next).*)',
