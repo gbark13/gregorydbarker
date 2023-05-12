@@ -7,34 +7,18 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: '/_next/:path',
-          has: [
-            {
-              type: 'host',
-              value: 'bella.daughter.of.gregorydbarker.com',
-            },
-          ],
-          destination: '/_next/:path',
-        },
-        {
-          source: '/images/:path',
-          has: [
-            {
-              type: 'host',
-              value: 'bella.daughter.of.gregorydbarker.com',
-            },
-          ],
-          destination: '/images/:path',
-        },
-        {
           source: '/:path((?!_next).*)',
-          has: [
-            {
-              type: 'host',
-              value: 'bella.daughter.of.gregorydbarker.com',
-            },
-          ],
-          destination: '/bella/:path*',
+          destination: (req, res) => {
+            const subdomain = req.headers.host.split('.')[0];
+            const path = req.params.path.join('/');
+            const shouldRedirect = !path.startsWith('_next') && !path.startsWith('public');
+  
+            if (subdomain !== 'www' && shouldRedirect) {
+              return { destination: `/${subdomain}/${path}` };
+            }
+  
+            return null;
+          }
         },
       ]
     }
