@@ -7,7 +7,7 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: '/:path((?!_next).*)',
+          source: '/:path((?!_next)(?!images).*)',
           has: [
             {
               type: 'host',
