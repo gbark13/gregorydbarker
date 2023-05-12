@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+export const metadata = {
+  title: "Bella's 5th Birthday Invitation",
+  description: "Bella's 5th Birthday Invitation",
+}
+
 export default function Bella() {
   return (
     <main style={{ color: "black", backgroundImage: "url('/images/seamless_pattern_with_bees_and_flowers_small.jpeg')" }}>
