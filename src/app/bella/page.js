@@ -13,7 +13,7 @@ export default function Bella() {
             <p>5206 E Sierra Sunset Trl, Cave Creek, AZ 85331</p>
           </div>
           <div>
-            <Image src={"/images/bee.gif"} width={130} height={130} />
+            <Image src={"/images/bee.gif"} width={130} height={130} alt="bee" />
           </div>
         </div>
         <h2 style={{ marginTop: "10px" }}>No <i>honey</i> business, just fun for the kids</h2>
@@ -32,10 +32,8 @@ export default function Bella() {
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSdzcNCC_mNKL6ax4Yj8MOeRz_qJae0Ra-dxZ-jDs4lfJtOdZg/viewform?embedded=true"
           // width="440" 
-          height="694"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
+          height="700"
+          style={{maxWidth: "450px", border: 0}}
         >
           Loading…
         </iframe>
