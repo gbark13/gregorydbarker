@@ -6,11 +6,23 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/bella/:path*',
-        destination: 'https://bella.daughter.of.gregorydbarker.com/:path*'
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'bella.daughter.of.gregorydbarker.com',
+          },
+        ],
+        destination: '/bella/:path*',
       }
     ];
-  }
+  },
+  webpack: (config) => {
+    // Add your app directory to the module search path
+    config.resolve.modules.push(path.resolve(__dirname, 'src'));
+
+    return config;
+  },
 }
 
 module.exports = nextConfig
