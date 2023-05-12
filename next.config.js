@@ -6,8 +6,8 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/mysubdomain/:path*',
-        destination: 'https://mysubdomain.mydomain.com/:path*'
+        source: '/bella/:path*',
+        destination: 'https://bella.daughter.of.gregorydbarker.com/:path*'
       }
     ];
   }

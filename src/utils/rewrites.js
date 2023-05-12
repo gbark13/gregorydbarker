@@ -7,8 +7,8 @@ export function useRouterRewrites(router) {
     if (asPath.startsWith('/')) {
       const [subdomain] = asPath.split('.');
 
-      if (subdomain === 'mysubdomain') {
-        const path = asPath.replace(/^\/mysubdomain/, '');
+      if (subdomain === 'bella') {
+        const path = asPath.replace(/^\/bella/, '');
         router.push({ query }, path);
       }
     }
