@@ -8,8 +8,9 @@ export const metadata = {
 export default function Bella() {
   return (
     <main style={{ color: "black", backgroundImage: "url('/images/seamless_pattern_with_bees_and_flowers_small.jpeg')" }}>
-      <div style={{ display: "flex", flexDirection: "column", backgroundColor: "rgba(225, 225, 225, 0.7)", padding: "2rem" }}>
+      <div style={{ position: "relative", display: "flex", flexDirection: "column", backgroundColor: "rgba(225, 225, 225, 0.7)", padding: "2rem" }}>
         <h1>Here is the <i>buzz</i> on Bella&apos;s 5th Birthday Party</h1>
+        <Image src={"/images/pool.jpg"} width={300} height={140} alt="pool party" />
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div>
             <h2 style={{ marginTop: "10px" }}>When to <i>bee</i></h2>
