@@ -16,7 +16,8 @@ export default function Bella() {
             <h2 style={{ marginTop: "10px" }}>When to <i>bee</i></h2>
             <p>June 10, 2023 @ 1pm</p>
             <h2 style={{ marginTop: "10px" }}>Where to <i>bee</i></h2>
-            <p>5206 E Sierra Sunset Trl, Cave Creek, AZ 85331 Gate Code #0506</p>
+            <p>5206 E Sierra Sunset Trl<br /> Cave Creek, AZ 85331</p>
+            <p>Gate Code #0506</p>
           </div>
           <div>
             <Image src={"/images/bee.gif"} width={130} height={130} alt="bee" />
