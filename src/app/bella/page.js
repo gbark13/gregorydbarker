@@ -15,7 +15,7 @@ export default function Bella() {
             <h2 style={{ marginTop: "10px" }}>When to <i>bee</i></h2>
             <p>June 10, 2023 @ 1pm</p>
             <h2 style={{ marginTop: "10px" }}>Where to <i>bee</i></h2>
-            <p>5206 E Sierra Sunset Trl, Cave Creek, AZ 85331</p>
+            <p>5206 E Sierra Sunset Trl, Cave Creek, AZ 85331 Gate Code #0506</p>
           </div>
           <div>
             <Image src={"/images/bee.gif"} width={130} height={130} alt="bee" />
@@ -23,7 +23,7 @@ export default function Bella() {
         </div>
         <h2 style={{ marginTop: "10px" }}>No <i>honey</i> business, just fun for the kids</h2>
         <p>
-          There will be swimming and some outdoor organized games for the kids.
+          There will be swimming and some outdoor organized games for the kids. We suggest you bring swimsuits, towels, goggles, floatation devices, sunscreen, sunglasses and/or hats for everyone who plans to get in the pool.
         </p>
         <p>
           No set meal time, however food and beverages for the kids will be available throughout the party for when they need to recharge.
