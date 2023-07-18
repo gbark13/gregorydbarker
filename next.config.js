@@ -11,6 +11,16 @@ const nextConfig = {
           has: [
             {
               type: 'host',
+              value: 'olga.wife.of.gregorydbarker.com',
+            },
+          ],
+          destination: '/olga/:path*',
+        },
+        {
+          source: '/:path((?!_next)(?!images).*)',
+          has: [
+            {
+              type: 'host',
               value: 'bella.daughter.of.gregorydbarker.com',
             },
           ],
