@@ -10,7 +10,7 @@ export default function Olga() {
     <main style={{ color: "black", backgroundImage: "url('/images/cactus_party.jpg')", backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
       <div style={{ position: "relative", display: "flex", flexDirection: "column", paddingTop: "2rem", paddingLeft: "5rem", paddingRight: "5rem", textAlign: "center", alignItems: "center" }}>
         <h1>You&apos;re invited to Olga&apos;s Prickin&apos; Awesome<br />Birthday-a-pa-looza!</h1>
-        <Image src={"/images/olga.jpg"} width={150} height={140} alt="olga party" />
+        <Image src={"/images/olga.jpg"} width={140} height={140} alt="olga party" />
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div>
             <h2 style={{ marginTop: "10px" }}>When</h2>
