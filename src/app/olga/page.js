@@ -14,7 +14,7 @@ export default function Olga() {
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div>
             <h2 style={{ marginTop: "10px" }}>When</h2>
-            <p>June 10, 2023 @ 1pm <i>sharp</i></p>
+            <p>August 12, 2023 @ 1pm <i>sharp</i></p>
             <h2 style={{ marginTop: "10px" }}>Where</h2>
             <p>5206 E Sierra Sunset Trl<br /> Cave Creek, AZ 85331</p>
             <p>Gate Code #0506</p>
@@ -22,22 +22,20 @@ export default function Olga() {
         </div>
         <h2 style={{ marginTop: "10px" }}>Getting to the <i>point</i>...</h2>
         <p>
-          There will be swimming and some outdoor organized games for the kids. We suggest you bring swimsuits, towels, goggles, floatation devices, sunscreen, sunglasses and/or hats for everyone who plans to get in the pool.
+          We will be playing games inside and out. 
         </p>
         <p>
-          No set meal time, however food and beverages for the kids will be available throughout the party for when they need to recharge.
+          There will be food and drinks.
         </p>
         <p>
-          Adult refreshments will be provided.
+          Wear or bring your swimming suits if you&apos;d like to swim. 
         </p>
         <h3 style={{ marginTop: "10px" }}>
-          Please RSVP using this form <br/>by August 1st
+          Please RSVP using this form <br/>by August 5th
         </h3>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdzcNCC_mNKL6ax4Yj8MOeRz_qJae0Ra-dxZ-jDs4lfJtOdZg/viewform?embedded=true"
-          // width="440" 
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdO_UfS-75tJLNSXYEJuByM_idwnHjr3HICbFRhxgT3K00lug/viewform?embedded=true" 
           height="700"
-          style={{maxWidth: "450px", border: 0}}
+          style={{maxWidth: "450px", border: 0}} 
         >
           Loading…
         </iframe>
