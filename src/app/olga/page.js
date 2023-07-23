@@ -9,6 +9,7 @@ export default function Olga() {
   return (
     <main style={{ color: "black", backgroundImage: "url('/images/cactus_party.jpg')", backgroundSize: "100% 100%", backgroundRepeat: "no-repeat" }}>
       <div style={{ position: "relative", display: "flex", flexDirection: "column", paddingTop: "2rem", paddingLeft: "5rem", paddingRight: "5rem", textAlign: "center", alignItems: "center" }}>
+        <div style={{ width: "75px", height: "75px", position: "relative" }}><iframe src="https://giphy.com/embed/3oriNN5kkARo7ZAhuE" width="100%" height="100%" style={{border: 0}}></iframe></div>
         <h1>You&apos;re invited to Olga&apos;s Prickin&apos; Awesome<br />Birthday-a-pa-looza!</h1>
         <Image src={"/images/olga.jpg"} width={140} height={140} alt="olga party" />
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -34,7 +35,7 @@ export default function Olga() {
           Please RSVP using this form <br/>by August 5th
         </h3>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdO_UfS-75tJLNSXYEJuByM_idwnHjr3HICbFRhxgT3K00lug/viewform?embedded=true" 
-          height="700"
+          height="1100"
           style={{maxWidth: "450px", border: 0}} 
         >
           Loading…
