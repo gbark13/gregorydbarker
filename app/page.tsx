@@ -56,7 +56,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-amber-900 mb-4">The Great Birthday Gold Rush</h3>
               <p className="text-amber-800 text-lg mb-6">
                 A gang of pint-sized cowpokes hears a rumor that there's buried treasure (birthday gold!) hidden
-                somewhere on the ranch. But they're not the only ones searching—villains, bandits, and maybe even a
+                somewhere on the ranch. But they're not the only ones searching - villains, bandits, and maybe even a
                 mysterious ghost are on the trail too.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -64,7 +64,7 @@ export default function Home() {
                   <Calendar className="h-6 w-6 text-amber-700 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-amber-900">Filming Date</h4>
-                    <p className="text-amber-700">Saturday, June 15th, 2024</p>
+                    <p className="text-amber-700">Saturday, June 21st, 2025</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -78,7 +78,7 @@ export default function Home() {
                   <MapPin className="h-6 w-6 text-amber-700 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-amber-900">Location</h4>
-                    <p className="text-amber-700">The Birthday Ranch (Bella's House)</p>
+                    <p className="text-amber-700">6226 E Seco Pl, Cave Creek (Bella's House)</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -100,7 +100,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-amber-900">Ready to Join the Adventure?</h2>
           <WesternBorder />
           <p className="text-lg text-amber-800">
-            Director Dad is looking for brave cowpokes to join Bella on this exciting treasure hunt!
+            Director Gregory Spielberg is looking for brave cowpokes to join Bella on this exciting treasure hunt!
           </p>
           <div className="pt-4">
             <Link href="/signup">
@@ -116,7 +116,7 @@ export default function Home() {
       <footer className="bg-amber-900 text-amber-50 py-8 px-6">
         <div className="container mx-auto text-center">
           <p>Directed & Produced by Bella's Dad</p>
-          <p className="text-sm mt-2">© 2024 The Great Birthday Gold Rush Productions</p>
+          <p className="text-sm mt-2">© 2025 GO Productions</p>
         </div>
       </footer>
     </div>
