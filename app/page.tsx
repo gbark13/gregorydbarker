@@ -31,7 +31,7 @@ export default function Home() {
             Bella's 7th Birthday Movie!
           </h1>
           <p className="text-lg md:text-xl text-amber-800">
-            Director Dad is looking for talented young actors to star in this year's biggest western adventure!
+            Director Gregory Spielberg is looking for talented young actors to star in this year's biggest western adventure!
           </p>
           <div className="pt-4">
             <Link href="/signup">

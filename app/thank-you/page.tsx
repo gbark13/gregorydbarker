@@ -25,7 +25,7 @@ export default function ThankYouPage() {
           </div>
 
           <p className="text-lg text-amber-800 mb-6">
-            Thank you for accepting your role in "The Great Birthday Gold Rush"! Director Dad will be in touch with more
+            Thank you for accepting your role in "The Great Birthday Gold Rush"! Director Gregory Spielberg will be in touch with more
             details about the production.
           </p>
 
