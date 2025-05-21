@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, MapPin, Calendar, Clock } from "lucide-react"
+import { WesternBorder } from "@/components/western-border"
 
 export default function Home() {
   return (
@@ -47,7 +48,7 @@ export default function Home() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-amber-900">About The Movie</h2>
-            <div className="w-24 h-1 bg-amber-700 mx-auto mt-4"></div>
+            <WesternBorder />
           </div>
 
           <Card className="border-amber-200 bg-amber-50 shadow-lg mb-8">
@@ -97,6 +98,7 @@ export default function Home() {
       <section className="py-16 px-6 container mx-auto text-center">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold text-amber-900">Ready to Join the Adventure?</h2>
+          <WesternBorder />
           <p className="text-lg text-amber-800">
             Director Dad is looking for brave cowpokes to join Bella on this exciting treasure hunt!
           </p>
