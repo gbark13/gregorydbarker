@@ -272,7 +272,7 @@ export default function SignupPage() {
                   className="w-full bg-amber-700 hover:bg-amber-800 text-white"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Accept Role in The Great Birthday Gold Rush"}
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
               </form>
             </Form>
