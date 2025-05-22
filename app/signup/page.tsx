@@ -107,9 +107,6 @@ export default function SignupPage() {
 
         <Card className="border-amber-200 bg-white shadow-lg">
           <CardHeader className="bg-amber-800 text-amber-50 rounded-t-lg relative overflow-hidden">
-            <div className="absolute top-0 right-0 opacity-20">
-              <img src="/images/cowboy-hat.png" alt="Cowboy Hat" className="w-32 h-32 object-contain" />
-            </div>
             <div className="flex items-center justify-center mb-2 relative z-10">
               <Lasso className="h-8 w-8 mr-2" />
             </div>
