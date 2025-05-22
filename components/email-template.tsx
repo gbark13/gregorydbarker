@@ -1,5 +1,10 @@
 import type * as React from "react"
 
+interface Sibling {
+  name: string
+  age: string
+}
+
 interface EmailTemplateProps {
   childName: string
   childAge: string
@@ -7,6 +12,7 @@ interface EmailTemplateProps {
   parentName: string
   email: string
   phone: string
+  siblings: Sibling[]
   dietaryRestrictions: string
   additionalInfo: string
 }
@@ -18,6 +24,7 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
   parentName,
   email,
   phone,
+  siblings,
   dietaryRestrictions,
   additionalInfo,
 }) => (
@@ -26,10 +33,10 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
       New Role Acceptance for "The Great Birthday Gold Rush"
     </h1>
 
-    <p>A new child has {attendance === "yes" ? "accepted" : "declined"} a role in Bella's birthday movie!</p>
+    <p>A new family has {attendance === "yes" ? "accepted" : "declined"} roles in Bella's birthday movie!</p>
 
     <div style={{ background: "#fffbeb", padding: "15px", borderRadius: "5px", marginBottom: "20px" }}>
-      <h2 style={{ color: "#92400e", marginTop: "0" }}>Child Information:</h2>
+      <h2 style={{ color: "#92400e", marginTop: "0" }}>Main Child Information:</h2>
       <ul style={{ paddingLeft: "20px" }}>
         <li>
           <strong>Name:</strong> {childName}
@@ -42,6 +49,22 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
         </li>
       </ul>
     </div>
+
+    {siblings && siblings.length > 0 && (
+      <div style={{ background: "#fef3c7", padding: "15px", borderRadius: "5px", marginBottom: "20px" }}>
+        <h2 style={{ color: "#92400e", marginTop: "0" }}>Additional Young Stars (Siblings):</h2>
+        <ul style={{ paddingLeft: "20px" }}>
+          {siblings.map((sibling, index) => (
+            <li key={index} style={{ marginBottom: "5px" }}>
+              <strong>{sibling.name}</strong> - Age {sibling.age}
+            </li>
+          ))}
+        </ul>
+        <p style={{ margin: "10px 0 0 0", fontSize: "14px", color: "#92400e" }}>
+          <strong>Total attending children:</strong> {1 + siblings.length}
+        </p>
+      </div>
+    )}
 
     <div style={{ background: "#fffbeb", padding: "15px", borderRadius: "5px", marginBottom: "20px" }}>
       <h2 style={{ color: "#92400e", marginTop: "0" }}>Parent/Guardian Information:</h2>

@@ -20,8 +20,18 @@ export async function sendFormSubmission(formData: FormData): Promise<Submission
   const parentName = formData.get("parentName") as string
   const email = formData.get("email") as string
   const phone = formData.get("phone") as string
+  const siblingsData = formData.get("siblings") as string
   const dietaryRestrictions = formData.get("dietaryRestrictions") as string
   const additionalInfo = formData.get("additionalInfo") as string
+
+  // Parse siblings data
+  let siblings = []
+  try {
+    siblings = siblingsData ? JSON.parse(siblingsData) : []
+  } catch (error) {
+    console.error("Error parsing siblings data:", error)
+    siblings = []
+  }
 
   // Validate required fields
   if (!childName || !childAge || !attendance || !parentName || !email || !phone) {
@@ -32,12 +42,16 @@ export async function sendFormSubmission(formData: FormData): Promise<Submission
   }
 
   try {
+    // Calculate total children attending
+    const totalChildren = attendance === "yes" ? 1 + siblings.length : siblings.length
+    const childrenText = totalChildren === 1 ? "1 child" : `${totalChildren} children`
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: "Birthday Party <birthday@resend.dev>", // Update this with your verified domain
       to: ["gbark1204@gmail.com"], // Replace with your email
       reply_to: email, // Set reply-to as the parent's email
-      subject: `New RSVP: ${childName} for Bella's Birthday Movie`,
+      subject: `New RSVP: ${childName}${siblings.length > 0 ? ` + ${siblings.length} sibling${siblings.length > 1 ? "s" : ""}` : ""} for Bella's Birthday Movie`,
       react: EmailTemplate({
         childName,
         childAge,
@@ -45,6 +59,7 @@ export async function sendFormSubmission(formData: FormData): Promise<Submission
         parentName,
         email,
         phone,
+        siblings,
         dietaryRestrictions: dietaryRestrictions || "None specified",
         additionalInfo: additionalInfo || "None provided",
       }),
@@ -65,7 +80,7 @@ export async function sendFormSubmission(formData: FormData): Promise<Submission
     // Return success response
     return {
       success: true,
-      message: `${childName}'s role has been confirmed! We'll send details to ${email}`,
+      message: `${childName}${siblings.length > 0 ? ` and ${siblings.length} sibling${siblings.length > 1 ? "s" : ""}` : ""} confirmed for the movie! We'll send details to ${email}`,
     }
   } catch (error) {
     // Log any unexpected errors

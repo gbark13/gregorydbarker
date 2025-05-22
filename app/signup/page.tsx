@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import { useForm, useFieldArray } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -13,8 +13,13 @@ import { Input } from "@/components/ui/input"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import { ArrowLeft, Lasso } from "lucide-react"
+import { ArrowLeft, Lasso, Plus, Trash2 } from "lucide-react"
 import { sendFormSubmission } from "../actions/email-actions"
+
+const siblingSchema = z.object({
+  name: z.string().min(1, "Sibling name is required"),
+  age: z.string().min(1, "Sibling age is required"),
+})
 
 const formSchema = z.object({
   childName: z.string().min(2, {
@@ -35,6 +40,7 @@ const formSchema = z.object({
   attendance: z.enum(["yes", "no"], {
     required_error: "Please select if your child will attend.",
   }),
+  siblings: z.array(siblingSchema).optional(),
   dietaryRestrictions: z.string().optional(),
   additionalInfo: z.string().optional(),
 })
@@ -52,10 +58,24 @@ export default function SignupPage() {
       email: "",
       phone: "",
       attendance: "yes",
+      siblings: [],
       dietaryRestrictions: "",
       additionalInfo: "",
     },
   })
+
+  const { fields, append, remove } = useFieldArray({
+    control: form.control,
+    name: "siblings",
+  })
+
+  const addSibling = () => {
+    append({ name: "", age: "" })
+  }
+
+  const removeSibling = (index: number) => {
+    remove(index)
+  }
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
@@ -64,7 +84,11 @@ export default function SignupPage() {
       // Create FormData object from form values
       const formData = new FormData()
       Object.entries(values).forEach(([key, value]) => {
-        formData.append(key, value || "")
+        if (key === "siblings") {
+          formData.append(key, JSON.stringify(value || []))
+        } else {
+          formData.append(key, value || "")
+        }
       })
 
       // Send form data to server action
@@ -181,6 +205,74 @@ export default function SignupPage() {
                       </FormItem>
                     )}
                   />
+                </div>
+
+                {/* Siblings Section */}
+                <div className="space-y-4 pt-4 border-t border-amber-100">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-amber-900">Additional Young Stars (Siblings)</h3>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={addSibling}
+                      className="border-amber-300 text-amber-800 hover:bg-amber-50"
+                    >
+                      <Plus className="h-4 w-4 mr-2" />
+                      Add Sibling
+                    </Button>
+                  </div>
+
+                  {fields.length === 0 && (
+                    <p className="text-amber-700 text-sm italic">
+                      No siblings added yet. Click "Add Sibling" if other children will be attending.
+                    </p>
+                  )}
+
+                  {fields.map((field, index) => (
+                    <div key={field.id} className="bg-amber-50 p-4 rounded-lg border border-amber-200">
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="font-medium text-amber-900">Sibling {index + 1}</h4>
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => removeSibling(index)}
+                          className="text-red-600 hover:text-red-800 hover:bg-red-50"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name={`siblings.${index}.name`}
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Sibling's Name</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Enter sibling's name" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name={`siblings.${index}.age`}
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Sibling's Age</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Enter sibling's age" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="space-y-4 pt-4 border-t border-amber-100">
