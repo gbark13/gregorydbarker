@@ -9,7 +9,13 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "The Great Birthday Gold Rush - Bella's 7th Birthday",
   description: "Join Bella's 7th Birthday Movie: The Great Birthday Gold Rush!",
-    generator: 'v0.dev'
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: { url: "/apple-icon.png", type: "image/png" },
+  },
 }
 
 export default function RootLayout({
