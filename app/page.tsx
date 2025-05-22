@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, MapPin, Calendar, Clock } from "lucide-react"
+import { Star, MapPin, Calendar, Clock, Gift } from "lucide-react"
 import { WesternBorder } from "@/components/western-border"
 
 export default function Home() {
@@ -11,11 +11,19 @@ export default function Home() {
       <header className="bg-amber-900 text-amber-50 py-4 px-6 md:px-10">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-xl md:text-2xl font-bold">The Great Birthday Gold Rush</h1>
-          <Link href="/signup">
-            <Button variant="outline" className="bg-amber-800 text-amber-50 hover:bg-amber-700 border-amber-600">
-              Join the Cast
-            </Button>
-          </Link>
+          <div className="flex items-center space-x-2">
+            <Link href="/gifts">
+              <Button variant="ghost" className="text-amber-50 hover:bg-amber-800 hover:text-amber-50">
+                <Gift className="h-4 w-4 mr-2" />
+                Gift Ideas
+              </Button>
+            </Link>
+            <Link href="/signup">
+              <Button variant="outline" className="bg-amber-800 text-amber-50 hover:bg-amber-700 border-amber-600">
+                Join the Cast
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -33,10 +41,23 @@ export default function Home() {
           <p className="text-lg md:text-xl text-amber-800">
             Director Gregory Spielberg is looking for talented young actors/actresses to star in this year's biggest western adventure!
           </p>
-          <div className="pt-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/signup">
-              <Button size="lg" className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-6 text-lg">
+              <Button
+                size="lg"
+                className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-6 text-lg w-full sm:w-auto"
+              >
                 Accept Your Role
+              </Button>
+            </Link>
+            <Link href="/gifts">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-amber-800 text-amber-50 hover:bg-amber-700 border-amber-600 px-8 py-6 text-lg w-full sm:w-auto"
+              >
+                <Gift className="mr-2 h-5 w-5" />
+                Gift Ideas
               </Button>
             </Link>
           </div>
