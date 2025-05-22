@@ -14,6 +14,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { ArrowLeft, Lasso } from "lucide-react"
+import { sendFormSubmission } from "../actions/email-actions"
 
 const formSchema = z.object({
   childName: z.string().min(2, {
@@ -56,22 +57,44 @@ export default function SignupPage() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values)
-      setIsSubmitting(false)
-
-      toast({
-        title: "Role Accepted!",
-        description: `${values.childName} is now part of the cast! We'll send details to ${values.email}`,
+    try {
+      // Create FormData object from form values
+      const formData = new FormData()
+      Object.entries(values).forEach(([key, value]) => {
+        formData.append(key, value || "")
       })
 
-      // Redirect to thank you page or show success message
-      router.push("/thank-you")
-    }, 1500)
+      // Send form data to server action
+      const result = await sendFormSubmission(formData)
+
+      if (result.success) {
+        toast({
+          title: "Role Accepted!",
+          description: result.message,
+        })
+
+        // Redirect to thank you page
+        router.push("/thank-you")
+      } else {
+        toast({
+          title: "Submission Error",
+          description: result.message || "There was a problem submitting the form. Please try again.",
+          variant: "destructive",
+        })
+        setIsSubmitting(false)
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      toast({
+        title: "Submission Error",
+        description: "There was a problem submitting the form. Please try again.",
+        variant: "destructive",
+      })
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -83,12 +106,15 @@ export default function SignupPage() {
         </Link>
 
         <Card className="border-amber-200 bg-white shadow-lg">
-          <CardHeader className="bg-amber-800 text-amber-50 rounded-t-lg">
-            <div className="flex items-center justify-center mb-2">
+          <CardHeader className="bg-amber-800 text-amber-50 rounded-t-lg relative overflow-hidden">
+            <div className="absolute top-0 right-0 opacity-20">
+              <img src="/images/cowboy-hat.png" alt="Cowboy Hat" className="w-32 h-32 object-contain" />
+            </div>
+            <div className="flex items-center justify-center mb-2 relative z-10">
               <Lasso className="h-8 w-8 mr-2" />
             </div>
-            <CardTitle className="text-2xl md:text-3xl text-center">Accept Your Role</CardTitle>
-            <CardDescription className="text-amber-100 text-center">
+            <CardTitle className="text-2xl md:text-3xl text-center relative z-10">Accept Your Role</CardTitle>
+            <CardDescription className="text-amber-100 text-center relative z-10">
               Join Bella's 7th Birthday Movie: "The Great Birthday Gold Rush"
             </CardDescription>
           </CardHeader>
