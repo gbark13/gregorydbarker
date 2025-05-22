@@ -25,7 +25,8 @@ export default function ThankYouPage() {
           </div>
 
           <p className="text-lg text-amber-800 mb-6">
-            Thank you for accepting your role in "The Great Birthday Gold Rush"! Director Gregory Spielberg will be in touch with more
+            Thank you for accepting your role in "The Great Birthday Gold Rush" starring Bella Barker! 
+            Director Gregory Spielberg will be in touch with more
             details about the production.
           </p>
 
@@ -34,7 +35,7 @@ export default function ThankYouPage() {
             <ul className="text-amber-800 text-left space-y-2">
               <li className="flex items-start">
                 <span className="font-medium mr-2">•</span>
-                <span>Date: Saturday, June 15th, 2024</span>
+                <span>Date: Saturday, June 21st, 2025</span>
               </li>
               <li className="flex items-start">
                 <span className="font-medium mr-2">•</span>
@@ -42,7 +43,7 @@ export default function ThankYouPage() {
               </li>
               <li className="flex items-start">
                 <span className="font-medium mr-2">•</span>
-                <span>Location: The Birthday Ranch (Bella's House)</span>
+                <span>Location: 6226 E Seco Pl, Cave Creek (Bella's House)</span>
               </li>
               <li className="flex items-start">
                 <span className="font-medium mr-2">•</span>
@@ -52,7 +53,7 @@ export default function ThankYouPage() {
           </div>
 
           <Link href="/">
-            <Button className="bg-amber-700 hover:bg-amber-800 text-white">Return to Movie Homepage</Button>
+            <Button className="bg-amber-700 hover:bg-amber-800 text-white">Return to Homepage</Button>
           </Link>
         </CardContent>
       </Card>

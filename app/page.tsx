@@ -31,7 +31,7 @@ export default function Home() {
             Bella's 7th Birthday Movie!
           </h1>
           <p className="text-lg md:text-xl text-amber-800">
-            Director Gregory Spielberg is looking for talented young actors to star in this year's biggest western adventure!
+            Director Gregory Spielberg is looking for talented young actors/actresses to star in this year's biggest western adventure!
           </p>
           <div className="pt-4">
             <Link href="/signup">
@@ -57,7 +57,7 @@ export default function Home() {
               <p className="text-amber-800 text-lg mb-6">
                 A gang of pint-sized cowpokes hears a rumor that there's buried treasure (birthday gold!) hidden
                 somewhere on the ranch. But they're not the only ones searching - villains, bandits, and maybe even a
-                mysterious ghost are on the trail too.
+                mysterious ghost are on the trail too. Will they find the clues to find the treasure?
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <div className="flex items-start space-x-3">
@@ -100,7 +100,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-amber-900">Ready to Join the Adventure?</h2>
           <WesternBorder />
           <p className="text-lg text-amber-800">
-            Director Gregory Spielberg is looking for brave cowpokes to join Bella on this exciting treasure hunt!
+            Director Gregory Spielberg (Barker) is looking for brave cowpokes to join Bella on this exciting production!
           </p>
           <div className="pt-4">
             <Link href="/signup">
@@ -115,7 +115,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-amber-900 text-amber-50 py-8 px-6">
         <div className="container mx-auto text-center">
-          <p>Directed & Produced by Bella's Dad</p>
+          <p>Directed & Produced by Bella's Dad & Mom</p>
           <p className="text-sm mt-2">© 2025 GO Productions</p>
         </div>
       </footer>
