@@ -18,8 +18,9 @@ const giftItems: GiftItem[] = [
   {
     id: "1",
     name: "Summer Pajamas",
-    image: "",
+    image: "/images/jammies.png",
     description: "100% Cotton (preferably organic) summer pajamas size 7/8",
+    link: "https://paradeorganics.com/collections/4-10-years/products/my-jammies-organic-kids-summer-pajamas?variant=40911777038359"
   },
   {
     id: "2",
