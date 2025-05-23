@@ -20,13 +20,14 @@ const giftItems: GiftItem[] = [
     name: "Summer Pajamas",
     image: "/images/jammies.png",
     description: "100% Cotton (preferably organic) summer pajamas size 7/8",
-    link: "https://paradeorganics.com/collections/4-10-years/products/my-jammies-organic-kids-summer-pajamas?variant=40911777038359"
+    link: "https://paradeorganics.com/collections/4-10-years/products/my-jammies-organic-kids-summer-pajamas?variant=40911777038359",
   },
   {
     id: "2",
     name: "Summer Night Gown",
-    image: "",
+    image: "/images/nightgown.jpg",
     description: "100% Cotton (preferably organic) summer night gown size 7/8",
+    link: "https://a.co/d/bM1LhBQ",
   },
   {
     id: "3",
@@ -40,7 +41,7 @@ const giftItems: GiftItem[] = [
     name: "Gift Card to North Valley Room Escape",
     image: "/images/nvescape.png",
     description: "Bella likes escape room games.",
-    link: "https://northvalleyescaperoom.com/"
+    link: "https://northvalleyescaperoom.com/",
   },
   {
     id: "5",
@@ -60,7 +61,7 @@ const giftItems: GiftItem[] = [
     name: "Butterfly Wonderworld General Admission",
     image: "/images/BW-Logo.png",
     description: "",
-    link: "https://butterflywonderland.com/"
+    link: "https://butterflywonderland.com/",
   }
 ]
 
