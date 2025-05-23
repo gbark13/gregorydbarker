@@ -72,13 +72,6 @@ export default function GiftsPage() {
       <header className="bg-amber-900 text-amber-50 py-4 px-6 md:px-10">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <div className="h-8 md:h-10 w-8 md:w-10 mr-3 relative overflow-hidden rounded-full bg-amber-800 flex items-center justify-center">
-              <img
-                src="/images/gold-nugget.png"
-                alt="Gold Nugget"
-                className="h-7 md:h-9 w-7 md:w-9 object-contain opacity-90 mix-blend-soft-light"
-              />
-            </div>
             <h1 className="text-xl md:text-2xl font-bold">The Great Birthday Gold Rush</h1>
           </div>
         </div>
