@@ -46,8 +46,9 @@ const giftItems: GiftItem[] = [
   {
     id: "5",
     name: "Full size bedsheet set",
-    image: "",
+    image: "/images/bedsheet.jpg",
     description: "100% cotton (preferably organic) Full size bedsheet set - grey or beige color",
+    link: "https://a.co/d/bM1LhBQ",
   },
   {
     id: "6",
@@ -59,7 +60,7 @@ const giftItems: GiftItem[] = [
   {
     id: "7",
     name: "Butterfly Wonderworld General Admission",
-    image: "/images/BW-Logo.png",
+    image: "/images/butterfly.png",
     description: "",
     link: "https://butterflywonderland.com/",
   }
