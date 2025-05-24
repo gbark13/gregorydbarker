@@ -12,12 +12,6 @@ export default function Home() {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-xl md:text-2xl font-bold">The Great Birthday Gold Rush</h1>
           <div className="flex items-center space-x-2">
-            <Link href="/gifts">
-              <Button variant="ghost" className="text-amber-50 hover:bg-amber-800 hover:text-amber-50">
-                <Gift className="h-4 w-4 mr-2" />
-                Gift Ideas
-              </Button>
-            </Link>
             <Link href="/signup">
               <Button variant="outline" className="bg-amber-800 text-amber-50 hover:bg-amber-700 border-amber-600">
                 Join the Cast
@@ -39,7 +33,7 @@ export default function Home() {
             Bella's 7th Birthday Movie!
           </h1>
           <p className="text-lg md:text-xl text-amber-800">
-            Director Gregory Spielberg is looking for talented young actors/actresses to star in this year's biggest western adventure!
+            Director Gregory Spielberg (Barker) is looking for talented young actors/actresses to star in this year's biggest western adventure!
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/signup">
@@ -47,7 +41,7 @@ export default function Home() {
                 size="lg"
                 className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-6 text-lg w-full sm:w-auto"
               >
-                Accept Your Role
+                Join the Cast
               </Button>
             </Link>
             <Link href="/gifts">
@@ -126,7 +120,7 @@ export default function Home() {
           <div className="pt-4">
             <Link href="/signup">
               <Button size="lg" className="bg-amber-700 hover:bg-amber-800 text-white px-8">
-                Accept Your Role Now
+                Join the Cast
               </Button>
             </Link>
           </div>

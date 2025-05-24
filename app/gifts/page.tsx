@@ -27,7 +27,7 @@ const giftItems: GiftItem[] = [
     name: "Summer Night Gown",
     image: "/images/nightgown.jpg",
     description: "100% Cotton (preferably organic) summer night gown size 7/8",
-    link: "https://a.co/d/bM1LhBQ",
+    link: "https://a.co/d/6rZIOwk",
   },
   {
     id: "3",
