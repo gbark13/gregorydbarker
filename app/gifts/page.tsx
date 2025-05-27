@@ -63,6 +63,20 @@ const giftItems: GiftItem[] = [
     image: "/images/butterfly.png",
     description: "",
     link: "https://butterflywonderland.com/",
+  },
+  {
+    id: "8",
+    name: "Summer Bridge Essentials Backpack 1-2",
+    image: "/images/summerbridge.jpg",
+    description: "",
+    link: "https://www.summerbridgeactivities.org/summer-bridge-essentials-backpack-1-2.html",
+  },
+  {
+    id: "9",
+    name: "Summer Bridge Essentials Backpack 2-3",
+    image: "/images/summerbridge.jpg",
+    description: "",
+    link: "https://www.summerbridgeactivities.org/summer-bridge-essentials-backpack-2-3.html",
   }
 ]
 
