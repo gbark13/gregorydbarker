@@ -8,26 +8,24 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Navigation />
 
-      {/* Creative Hero Section with Diagonal Layout */}
-      <section className="relative py-12 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amazonia-teal/10 to-amazonia-orange/10"></div>
+      {/* Creative Hero Section with Ranch Background */}
+      <section className="relative py-12 px-4 overflow-hidden min-h-[600px]">
+        {/* Ranch Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/images/balsamic-ranch-background.png')",
+          }}
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/30"></div>
+
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="text-left">
-              <div className="text-6xl mb-4 transform rotate-12 inline-block">👶</div>
-              <div className="text-5xl mb-3 transform -rotate-6 inline-block ml-6">🐴</div>
-              <div className="text-6xl mb-4 transform rotate-3 inline-block">🏡</div>
+            <div className="text-left">{/* Empty space where emojis and headings were */}</div>
 
-              <h1 className="text-4xl md:text-5xl font-bold font-fun text-amazonia-blue mb-3 transform -rotate-1">
-                Welcome to Balsamic Ranch,
-              </h1>
-              <h2 className="text-3xl md:text-4xl font-bold font-fun text-amazonia-orange mb-4 transform rotate-1">
-                Housewarming Baby Shower
-              </h2>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-2xl transform rotate-2 border-4 border-amazonia-teal/20">
-              <p className="text-lg text-gray-700 mb-6">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-2xl transform rotate-2 border-4 border-amazonia-teal/30">
+              <p className="text-lg text-gray-800 mb-6 font-medium">
                 Join Greg and Olga as we celebrate our new home AND the upcoming arrival of our little one! Due in July,
                 this precious baby will be a wonderful surprise.
               </p>
@@ -36,7 +34,7 @@ export default function HomePage() {
                 <Link href="/rsvp">
                   <Button
                     size="lg"
-                    className="w-full bg-amazonia-orange hover:bg-red-600 text-white px-8 py-3 font-fun text-lg transform hover:scale-105 transition-transform"
+                    className="w-full bg-amazonia-orange hover:bg-red-600 text-white px-8 py-3 font-fun text-lg transform hover:scale-105 transition-transform shadow-lg"
                   >
                     RSVP Now
                   </Button>
@@ -44,7 +42,7 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full border-amazonia-blue text-amazonia-blue hover:bg-blue-50 px-8 py-3 font-fun text-lg transform hover:scale-105 transition-transform"
+                  className="w-full border-2 border-amazonia-blue bg-white/80 text-amazonia-blue hover:bg-blue-50 px-8 py-3 font-fun text-lg transform hover:scale-105 transition-transform shadow-lg"
                 >
                   Save the Date
                 </Button>

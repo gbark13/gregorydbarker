@@ -18,7 +18,7 @@ export function Navigation() {
             <div className="bg-white/20 rounded-full p-2 backdrop-blur-sm">
               <span className="text-xl">🏡🐴</span>
             </div>
-            <span className="hidden md:block">Balsamic Ranch</span>
+            <span className="hidden md:block">Welcome to Balsamic Ranch, Baby!</span>
           </Link>
 
           <div className="flex space-x-2">
