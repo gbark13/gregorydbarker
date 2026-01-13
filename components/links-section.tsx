@@ -107,7 +107,7 @@ export function LinksSection() {
                 variant="outline"
                 className="w-full border-accent text-accent hover:bg-accent/10 bg-transparent"
               >
-                <a href="mailto:family@example.com">
+                <a href="mailto:olgausa.usa@gmail.com">
                   Send Email
                   <Mail className="ml-2 h-4 w-4" />
                 </a>
