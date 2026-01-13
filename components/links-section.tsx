@@ -78,7 +78,7 @@ export function LinksSection() {
                 className="w-full border-accent text-accent hover:bg-accent/10 bg-transparent"
               >
                 <a
-                  href="https://acsto.org/parents/how-it-works"
+                  href="https://acsto.org/donors/what-is-a-tax-credit"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
