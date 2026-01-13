@@ -13,7 +13,7 @@ const _libreBaskerville = Libre_Baskerville({
 })
 
 export const metadata: Metadata = {
-  title: "Support Our Journey - Christian Academy Scholarship Fund",
+  title: "Support Our Christian Education",
   description:
     "Help Mayrelia and Dayla continue their faith-based education through tax credit donations. Your support makes a difference.",
     generator: 'v0.app'
