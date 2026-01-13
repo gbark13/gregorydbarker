@@ -120,11 +120,11 @@ export function LinksSection() {
           <h3 className="mb-4 text-lg font-bold text-card-foreground">2025 Arizona Tax Credit Limits</h3>
           <div className="flex flex-col gap-4 md:flex-row md:justify-center md:gap-12">
             <div>
-              <p className="text-3xl font-bold text-primary">$1,459</p>
+              <p className="text-3xl font-bold text-primary">$1,535</p>
               <p className="text-sm text-muted-foreground">Single/Head of Household</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-primary">$2,917</p>
+              <p className="text-3xl font-bold text-primary">$3,062</p>
               <p className="text-sm text-muted-foreground">Married Filing Jointly</p>
             </div>
           </div>
