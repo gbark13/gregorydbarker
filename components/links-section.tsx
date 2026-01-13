@@ -22,7 +22,7 @@ export function LinksSection() {
               <CardTitle className="text-card-foreground">Make a Tax Credit Donation</CardTitle>
               <CardDescription className="leading-relaxed">
                 Donate through the Arizona Christian School Tuition Organization (ACSTO) and receive a dollar-for-dollar Arizona state tax
-                credit.
+                credit*.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -129,7 +129,7 @@ export function LinksSection() {
             </div>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            *Check with your tax advisor for current limits and eligibility
+            *Depending on your tax situation, credit might be reduced due to other applicable tax credits. Check with your tax advisor for current limits and eligibility.
           </p>
         </div>
       </div>
