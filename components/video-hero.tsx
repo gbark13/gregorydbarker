@@ -2,7 +2,7 @@ import { Heart } from "lucide-react"
 
 export function VideoHero() {
   // Replace this VIDEO_ID with your actual YouTube video ID
-  const VIDEO_ID = "m-UU1ekwnbc"
+  const VIDEO_ID = "cDCZApCZK-8"
 
   return (
     <section className="relative bg-background py-8 px-4 md:py-12">
